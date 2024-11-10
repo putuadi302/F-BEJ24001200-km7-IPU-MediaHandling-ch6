@@ -3,36 +3,6 @@ const prisma = new PrismaClient();
 const imagekit = require("../libs/imagekit");
 
 class ImageControllers {
-  // static async UploadImage(req, res) {
-  //   const { title, description } = req.body;
-  //   // Validasi jika tidak ada file yang diunggah
-  //   if (req.files.length === 0) {
-  //     return res.status(400).json({
-  //       message: "Bad Request",
-  //       error: "Minimal upload 1 foto",
-  //     });
-  //   }
-
-  //   try {
-  //     const result = await imagekit.upload({
-  //       file: req.file.buffer,
-  //       fileName: req.file.originalname,
-  //     });
-
-  //     const image = await prisma.image.create({
-  //       data: {
-  //         title,
-  //         description,
-  //         profileImageUrl: result.url,
-  //         imageFieldId: result.fileId,
-  //       },
-  //     });
-
-  //     res.json(image);
-  //   } catch (error) {
-  //     res.status(500).json({ error: error.message });
-  //   }
-  // }
   static async UploadMoreImage(req, res) {
     try {
       const { titles, descriptions } = req.body;
