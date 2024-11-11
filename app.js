@@ -11,6 +11,9 @@ const routes = require("./routes/index.js");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/", routes);
+app.use("/coba", (req, res) => {
+  res.send("berhasil masuk");
+});
 
 const PORT = process.env.PORT || 3000;
 
