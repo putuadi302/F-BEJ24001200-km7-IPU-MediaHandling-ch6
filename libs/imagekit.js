@@ -1,9 +1,9 @@
 const ImageKit = require("imagekit");
 
 const imagekit = new ImageKit({
-  publicKey: process.env.IMAGEKIT_PUBLICKEY,
-  privateKey: process.env.IMAGEKIT_PRIVATEKEY,
-  urlEndpoint: process.env.IMAGEKIT_URL,
+  publicKey: process.env.PUBLICKEY,
+  privateKey: process.env.PRIVATEKEY,
+  urlEndpoint: process.env.URL_ENDPOINT,
 });
 
 module.exports = imagekit;

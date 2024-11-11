@@ -5,7 +5,7 @@ const ImageControllers = require("../controllers/imageControllers");
 //upload banyak image
 route.post(
   "/moreImages",
-  multerUpload.array("image", 5),
+  multerUpload.array("image"),
   ImageControllers.UploadMoreImage
 );
 
